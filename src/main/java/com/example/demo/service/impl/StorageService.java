@@ -1,6 +1,5 @@
 package com.example.demo.service.impl;
 
-import com.example.demo.config.PathConfig;
 import com.example.demo.entities.FileData;
 import com.example.demo.entities.User;
 import com.example.demo.repository.FileDataRepository;
@@ -23,8 +22,7 @@ public class StorageService {
     @Autowired
     private FileDataRepository fileDataRepository;
 
-    @Autowired
-    private PathConfig pathConfig;
+
     /**
      * Загружает изображение пользователя в файловую систему.
      *
@@ -35,7 +33,7 @@ public class StorageService {
      */
     public FileData uploadImageToFileSystemAvatarUser(MultipartFile file, User user) throws IOException {
         String fileName = UUID.randomUUID().toString();
-        String filePath = pathConfig.getStorageServiceFolderPath() + fileName + ".png";
+        String filePath = "" + fileName + ".png";
 
         // Удалить старый объект FileData, если он существует
         if (user.getFileData() != null) {

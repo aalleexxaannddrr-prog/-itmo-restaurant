@@ -47,12 +47,10 @@ import org.springframework.context.annotation.Configuration;
 )
 public class OpenAPIConfiguration {
 
-        @Autowired
-        private PathConfig pathConfig;
 
         @Bean
         public OpenApiCustomizer openApiCustomizer() {
-                return openApi -> openApi.addServersItem(new io.swagger.v3.oas.models.servers.Server().url(pathConfig.getSwaggerUrlPath()));
+                return openApi -> openApi.addServersItem(new io.swagger.v3.oas.models.servers.Server().url("https://itmo-restaurant.onrender.com"));
         }
 
         /**
