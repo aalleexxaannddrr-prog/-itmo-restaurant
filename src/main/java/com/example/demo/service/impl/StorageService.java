@@ -33,7 +33,7 @@ public class StorageService {
      */
     public FileData uploadImageToFileSystemAvatarUser(MultipartFile file, User user) throws IOException {
         String fileName = UUID.randomUUID().toString();
-        String filePath = "" + fileName + ".png";
+        String filePath = "/app/src/main/resources/" + fileName + ".png";
 
         // Удалить старый объект FileData, если он существует
         if (user.getFileData() != null) {
