@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Страница минимум на весь экран */
+}
+
+header {
+    text-align: center;
+    padding: 50px;
+    background-color: #3cc2dc;
+    color: white;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+nav {
+    background-color: #333;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+.content {
+    flex: 1; /* Контент заполняет оставшееся пространство */
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    margin-top: auto; /* Сдвиг футера вниз */
+}
+
+/* Специфичные стили для login_form.html и registration.html */
+.login-form, .registration-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px auto; /* Центрирование формы */
+}
+
+.login-form label, .registration-form label {
+    margin-bottom: 8px;
+}
+
+.login-form input, .registration-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button, .registration-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3cc2dc;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-form button:hover, .registration-form button:hover {
+    background-color: #29a1b3;
+}
+
+/* Центровка заголовка H1 в формах */
+.login-form h1, .registration-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
