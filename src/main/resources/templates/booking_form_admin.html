@@ -18,8 +18,8 @@
 </head>
 <body>
 
-<div th:replace="~{/menu :: menu}"></div>
-<div th:replace="~{/header :: header}"></div>
+<div th:replace="~{menu :: menu}"></div>
+<div th:replace="~{header :: header}"></div>
 <h1>Добавить стол</h1>
 <form th:action="@{/admin/tables/add}" method="post">
     <label for="number">Номер стола:</label>
@@ -31,7 +31,7 @@
     <button type="submit">Добавить стол</button>
 </form>
 
-<div th:replace="~{/footer :: footer}"></div>
+<div th:replace="~{footer :: footer}"></div>
 
 </body>
 </html>
